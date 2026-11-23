@@ -1,75 +1,136 @@
-# React + TypeScript + Vite
+🧠 Quiz Master
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Test Your Knowledge. Challenge Yourself. Master the Quiz!
 
-Currently, two official plugins are available:
+Quiz Master is a modern, interactive quiz application built with React, TypeScript, and Tailwind CSS. It allows users to customize their quiz experience by selecting a category, difficulty level, and number of questions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Questions are fetched dynamically from the Open Trivia Database API, making every quiz session an engaging experience.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✨ Features
 
-## Expanding the ESLint configuration
+- 🎯 Dynamic Categories – Choose from multiple quiz categories.
+- ⚡ Difficulty Selection – Easy, Medium, and Hard modes.
+- 🔢 Custom Question Count – Select 5 to 50 questions.
+- ⏱️ Countdown Timer – 20 seconds for each question.
+- 🎲 Shuffled Options – Answer options are randomized.
+- 📊 Score Calculation – Track correct and incorrect answers.
+- 🏆 Result Screen – View your final score and percentage.
+- 🔄 Try Again – Restart the quiz using your previous settings.
+- 📱 Responsive UI – Clean interface with a modern dark theme.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Technology| Purpose
+React| UI Development
+TypeScript| Type Safety
+Tailwind CSS| Styling
+React Hooks| State & Lifecycle Management
+Open Trivia DB API| Quiz Questions
+Lucide React| Icons
+Vite| Development & Build Tool
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+🌐 API Integration
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Quiz Master uses the free "Open Trivia Database API" (https://opentdb.com/api_config.php).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The API URL is generated dynamically based on the user's selected settings.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Example:
 
-```
+https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple
+
+Supported parameters:
+
+- "amount" – Number of questions
+- "category" – Selected quiz category
+- "difficulty" – Easy, Medium, or Hard
+- "type" – Multiple-choice questions
+
+---
+
+🚀 Getting Started
+
+1. Clone the Repository
+
+git clone (https://github.com/vs6905397-star/Quiz_Master)
+
+2. Navigate to Project
+
+cd quiz-app
+
+3. Install Dependencies
+
+npm install
+
+4. Start Development Server
+
+npm run dev
+
+Open the local URL provided by Vite in your browser.
+
+---
+
+📂 Project Structure
+
+src/
+├── components/
+│   ├── StartScreen.tsx
+│   ├── Question.tsx
+│   └── ResultScreen.tsx
+│
+├── hooks/
+│   └── useQuiz.ts
+│
+├── service/
+│   └── quiz.api.ts
+│
+├── types/
+│   └── quiz.types.ts
+│
+├── utils/
+│   └── quiz.utils.ts
+│
+├── App.tsx
+└── main.tsx
+
+---
+
+💡 What I Practiced
+
+Building this project helped me practice:
+
+- TypeScript interfaces and type aliases
+- Union types and function typing
+- Typed React state using "useState"
+- Custom React Hooks
+- Async/Await and API integration
+- Error handling with Try/Catch
+- Array methods such as "map()" and "reduce()"
+- Dynamic URL generation
+- Props and component communication
+- Managing application state and timer logic
+
+---
+
+🎨 UI Theme
+
+Modern dark interface with purple and cyan gradients, glassmorphism effects, and interactive quiz components.
+
+---
+
+👨‍💻 Developer
+
+Vansh Sharma
+
+Built with ❤️ using React + TypeScript.
+
+---
+
+
+⭐ If you like this project, consider giving it a star!
