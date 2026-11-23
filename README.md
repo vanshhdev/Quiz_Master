@@ -101,6 +101,11 @@ src/
 
 ---
 
+Live Link
+(https://quizmaster-phi-sandy.vercel.app/)
+
+---
+
 💡 What I Practiced
 
 Building this project helped me practice:
