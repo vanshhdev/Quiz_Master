@@ -33,6 +33,10 @@ export default function ResultScreen({
                 <span className="text-6xl font-bold text-purple-400">
                    {correctAnswers}
                 </span>
+                <p className="text-2xl font-bold text-purple-400">Out of</p>
+                <span className="text-6xl font-bold text-purple-400">
+                   {totalQuestions}
+                </span>
                 <span className="text-gray-400 text-sm">Correct Answers</span>
                 <span className="text-2xl font-semibold text-cyan-400 mt-2">
                     {percantage}%
